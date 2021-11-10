@@ -72,7 +72,9 @@ public class QuickSort_Basic<X extends Comparable<X>> extends QuickSort<X> {
             // NOTE: if we were using Scala, it would be easy to set up a comparer function and a swapper function. With java, it's possible but much messier.
             if (helper.instrumented()) {
                 while (true) {
-                    while (helper.less(xs[++i], v)) if (i == hi - 1) break;
+                    while (helper.less(xs[++i], v))
+                        if (i == hi - 1)
+                            break;
                     while (helper.less(v, xs[--j])) if (j == lo) break;
                     if (i >= j) break;
                     helper.swap(xs, i, j);

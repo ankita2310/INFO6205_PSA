@@ -87,4 +87,17 @@ public class LinkedList_Elements<Item> implements LinkedList<Item> {
     }
 
     private Element<Item> head = null;
+
+    public static void main(String[] args) throws BQSException {
+        LinkedList_Elements<Integer> l1=new LinkedList_Elements<>();
+        l1.add(100);
+        l1.add(200);
+        l1.add(300);
+        System.out.println(l1);
+        System.out.println("Head: " + l1.head);
+
+       // l1.remove();
+      //  System.out.println(l1);
+
+    }
 }

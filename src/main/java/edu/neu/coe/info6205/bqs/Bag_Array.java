@@ -94,7 +94,27 @@ public class Bag_Array<Item> implements Bag<Item> {
      */
     private static <T> T[] growFrom(T[] from, int size) {
         // TO BE IMPLEMENTED
-        return null;
+        T[] result=(T[]) new Object[size];
+        System.arraycopy(from,0,result,0,from.length);
+        return result;
+    }
+
+    public static void main(String[] args)
+    {
+        Bag_Array<Integer> bag1=new Bag_Array<>();
+        bag1.add(12);
+        bag1.add(20);
+        bag1.add(20);
+        bag1.add(4);
+        bag1.add(4);
+        bag1.add(4);bag1.add(4);
+
+
+
+        System.out.println(bag1);
+        System.out.println(bag1.multiplicity(4));
+
+
     }
 
     private Item[] items = null;
